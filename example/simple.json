@@ -1,0 +1,9 @@
+{
+  "activities": [
+    { "id": "design", "duration": 3 },
+    { "id": "probe", "duration": 1, "predecessors": ["design"] },
+    { "id": "cut", "duration": 2, "predecessors": ["design"] },
+    { "id": "assemble", "duration": 2, "predecessors": ["probe", "cut"] },
+    { "id": "test", "duration": 1, "predecessors": ["assemble"] }
+  ]
+}

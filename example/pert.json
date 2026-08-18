@@ -1,0 +1,10 @@
+{
+  "activities": [
+    { "id": "excavate", "a": 2, "m": 3, "b": 6 },
+    { "id": "pour", "a": 3, "m": 4, "b": 8, "predecessors": ["excavate"] },
+    { "id": "walls", "a": 5, "m": 7, "b": 12, "predecessors": ["pour"] },
+    { "id": "roof", "a": 2, "m": 3, "b": 5, "predecessors": ["walls"] },
+    { "id": "services", "a": 4, "m": 6, "b": 10, "predecessors": ["walls"] },
+    { "id": "fitout", "a": 3, "m": 5, "b": 9, "predecessors": ["roof", "services"] }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "activities": [
+    { "id": "site-prep", "duration": 2 },
+    { "id": "foundation", "duration": 4, "predecessors": ["site-prep"] },
+    { "id": "framing", "duration": 6, "predecessors": ["foundation"] },
+    { "id": "roofing", "duration": 3, "predecessors": ["framing"] },
+    { "id": "electrical", "duration": 4, "predecessors": ["framing"] },
+    { "id": "plumbing", "duration": 3, "predecessors": ["framing"] },
+    { "id": "drywall", "duration": 5, "predecessors": ["electrical", "plumbing"] },
+    { "id": "painting", "duration": 2, "predecessors": ["drywall"] },
+    { "id": "flooring", "duration": 2, "predecessors": ["drywall"] },
+    { "id": "finish", "duration": 1, "predecessors": ["painting", "flooring"] }
+  ]
+}
