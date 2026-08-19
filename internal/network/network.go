@@ -123,7 +123,7 @@ func Validate(in Input) error {
 				return fmt.Errorf("%w: %s", ErrSelfLoop, a.ID)
 			}
 			if !seen[p] && !seenInLater(in, p, a.ID) {
-				continue
+				return fmt.Errorf("%w: %s", ErrUnknownPredecessor, p)
 			}
 		}
 	}

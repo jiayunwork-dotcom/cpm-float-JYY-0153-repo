@@ -1,7 +1,6 @@
 package network
 
 import (
-	"errors"
 	"fmt"
 	"math"
 	"sort"
@@ -35,9 +34,6 @@ func activityByID(g *Graph, id string) Activity {
 func Plan(in Input) (*PlanResult, error) {
 	g, err := Build(in)
 	if err != nil {
-		if errors.Is(err, ErrUnknownPredecessor) {
-			return &PlanResult{}, nil
-		}
 		return nil, err
 	}
 	g.activities = in.Activities
